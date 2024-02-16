@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 // { Hero } from '../hero';
-import { LlamaService } from '../llama.service';
+ import { LlamaService } from '../llama.service';
 
 @Component({
   selector: 'app-heroes',
@@ -10,25 +10,27 @@ import { LlamaService } from '../llama.service';
 })
 
 
-export class ChatComponent implements OnInit {
-
-  chat = [
-    {type: "response", text:'Hallo, can I help You?', hasSpace:'hasNoSpace'},
-  ];
-
-  loading = false;
-
-  constructor(private llamaService: LlamaService)
-    {
+ export class ChatComponent implements OnInit {
+ 
+   chat = [
+    {type: "response", text:'Hallo, can I help You? !!!', hasSpace:'hasNoSpace'},
+   ];
+ 
+   loading = false;
+ 
+   constructor(private llamaService: LlamaService)
+     {
+       console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
       console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-
-      this.llamaService.test()
-        .subscribe(
-          (response) => {
-            console.log(response.data)
-
-          })
-    }
+ 
+       this.llamaService.test()
+         .subscribe(
+           (response) => {
+             console.log(response.data)
+            console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+ 
+           })
+     }
 
   ngOnInit(): void {}
 
@@ -76,3 +78,4 @@ export class ChatComponent implements OnInit {
 
 
 }
+
