@@ -20,14 +20,14 @@ import { Component, OnInit } from '@angular/core';
  
    constructor(private llamaService: LlamaService)
      {
-       console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-      console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+       console.log('!!!!!!!!!!!hrthrhrhrhr!!!!!!!!!!!!!!!!!!!!!')
+      console.log('!!!!!!!!!!!!!!!!!!dhdshshrsth!!!!!!!!!!!!!!!!!!')
  
        this.llamaService.test()
          .subscribe(
            (response) => {
              console.log(response.data)
-            console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+            console.log('!!!!!!!!!!!!!!!rthrthrhh!!!!!!!!!!!!!!!!!!!!')
  
            })
      }
