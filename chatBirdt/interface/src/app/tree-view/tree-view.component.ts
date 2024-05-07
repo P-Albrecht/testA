@@ -37,9 +37,11 @@ export class TreeViewComponent implements OnChanges {
     this.dataSource.data = this.tree;
   }
 
-  hasChild = (_: number, node: TreeNode) => !!node.children && node.children.length > 0;
+   hasChild = (_: number, node: TreeNode) => !!node.children && node.children.length > 0;
+ 
+   clickFunction (node: any) {
+    this.nodeSelectEvent.emit({node:node, worked:true});
+   }
+ }
 
-  clickFunction (node: any) {
-    this.nodeSelectEvent.emit(node);
-  }
-}
+
